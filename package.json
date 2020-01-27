@@ -16,6 +16,7 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "md-generator": "^0.2.8",
     "nodemon": "^2.0.2"
   }
 }
