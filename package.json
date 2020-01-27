@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://github.com/rafaelfborges/omnistack-week10-backend#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelfborges/omnistack-week10-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rafaelfborges/omnistack-week10-backend/issues"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
@@ -16,7 +24,10 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "md-generator": "^0.2.8",
     "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": ">=12.14",
+    "yarn": ">=1.21"
   }
 }
