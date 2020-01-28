@@ -40,7 +40,7 @@ Development dependencies
 ## Install
 
 ```sh
-yarn install
+$ yarn install
 ```
 
 ## Usage
@@ -56,7 +56,7 @@ $ yarn dev
 
 ## Database configuration
 
-Now for the project you need a moogodb connection, you follow these steps below:
+For the project you need a moogodb connection, you follow these steps below:
 
 1. Create an account on MongoDB Cloud
 2. Create a mongo db cluster

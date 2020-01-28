@@ -12,6 +12,7 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
+mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.MONGO_URL_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true
