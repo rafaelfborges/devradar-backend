@@ -16,10 +16,13 @@
 
 > Backend application developed during the Week Omnistack 10 of [Rocketseat](https://rocketseat.com.br).
 > Two other applications are also part of this project:
+>
 > - [DevRadar - Web (React)](https://github.com/rafaelfborges/devradar-web)
 > - [DevRadar - Mobile (React Native)](https://github.com/rafaelfborges/devradar-mobile)
 
-### ✨ [Live Demo](http://devradar-osweek-backend.herokuapp.com)
+### ✨ [Demo](http://devradar-osweek-backend.herokuapp.com)
+
+![DevRadar - Backend](/demo/preview-devradar-api.png)
 
 ## Prerequisites
 
@@ -27,6 +30,7 @@
 - yarn >=1.21
 
 ## Dependencies
+
 - axios@^0.19.1
 - cors@^2.8.5"
 - dotenv@^8.2.0
@@ -36,6 +40,7 @@
 - swagger-ui-express@^4.1.3
 
 Development dependencies
+
 - nodemon@^2.0.2
 
 ## Install
@@ -50,7 +55,9 @@ $ yarn install
 $ cp .env.example .env
 $ yarn start
 ```
+
 Or running dev
+
 ```sh
 $ yarn dev
 ```
@@ -65,15 +72,15 @@ For the project you need a moogodb connection, you follow these steps below:
 4. Create a user to database connection **week10** with your password
 5. Get URL connection on cluster configuration
 6. Replace MONGO_URL_CONNECTION key on .env
-eg: mongodb+srv://<username>:<password>@node-store-sqexu.mongodb.net/week10?retryWrites=true&w=majority
+   eg: mongodb+srv://<username>:<password>@node-store-sqexu.mongodb.net/week10?retryWrites=true&w=majority
 
 ## Author
 
 👤 **Rafael Borges**
 
-* Website: https://linkedin.com/in/rafaelfborges/
-* Github: [@rafaelfborges](https://github.com/rafaelfborges)
-* LinkedIn: [@rafaelfborges](https://linkedin.com/in/rafaelfborges)
+- Website: https://linkedin.com/in/rafaelfborges/
+- Github: [@rafaelfborges](https://github.com/rafaelfborges)
+- LinkedIn: [@rafaelfborges](https://linkedin.com/in/rafaelfborges)
 
 ## 🤝 Contributing
 
@@ -88,5 +95,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [Rafael Borges](https://github.com/rafaelfborges).<br />
 This project is [MIT](https://github.com/rafaelfborges/devradar-backend/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

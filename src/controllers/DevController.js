@@ -11,7 +11,6 @@ module.exports = {
 
     return response.json(devs);
   },
-
   async store(request, response) {
     const { github_username, techs, latitude, longitude } = request.body;
 
@@ -45,5 +44,11 @@ module.exports = {
     }
 
     return response.status(201).send(dev);
+  },
+  async update(request, response) {
+    const { id } = request.params;
+
+    
+    return response.status(200).send("Ok");
   }
 };
