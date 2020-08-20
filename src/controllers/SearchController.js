@@ -1,4 +1,4 @@
-const Dev = require('../models/Dev')
+const Dev = require('../models/Dev');
 const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
@@ -15,13 +15,13 @@ module.exports = {
         $near: {
           $geometry: {
             type: 'Point',
-            coordinates: [longitude, latitude]
+            coordinates: [longitude, latitude],
           },
-          $maxDistance: 10000
-        }
-      }
+          $maxDistance: 10000,
+        },
+      },
     });
 
     return response.json({ devs });
-  }
-}
+  },
+};

@@ -12,32 +12,35 @@ module.exports = {
     return response.json(devs);
   },
   async store(request, response) {
-    const { github_username, techs, latitude, longitude } = request.body;
+    const { githubUsername, techs, latitude, longitude } = request.body;
 
-    let dev = await Dev.findOne({ github_username });
+    let dev = await Dev.findOne({ githubUsername });
 
     if (!dev) {
-      const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
-      const { name = login, avatar_url, bio } = apiResponse.data;
+      const apiResponse = await axios.get(
+        `https://api.github.com/users/${githubUsername}`,
+      );
+      // eslint-disable-next-line no-undef
+      const { name = login, avatarUrl, bio } = apiResponse.data;
       const techsArray = parseStringAsArray(techs);
 
       const location = {
         type: 'Point',
-        coordinates: [longitude, latitude]
-      }
+        coordinates: [longitude, latitude],
+      };
 
       dev = await Dev.create({
-        github_username,
+        githubUsername,
         name,
-        avatar_url,
+        avatarUrl,
         bio,
         techs: techsArray,
-        location
-      })
+        location,
+      });
 
       const sendSocketMessageTo = findConnections(
         { latitude, longitude },
-        techsArray
+        techsArray,
       );
 
       sendMessage(sendSocketMessageTo, 'new-dev', dev);
@@ -46,9 +49,8 @@ module.exports = {
     return response.status(201).send(dev);
   },
   async update(request, response) {
-    const { id } = request.params;
+    // const { id } = request.params;
 
-    
-    return response.status(200).send("Ok");
-  }
+    return response.status(200).send('Ok');
+  },
 };

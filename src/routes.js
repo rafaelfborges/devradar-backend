@@ -1,7 +1,7 @@
 const { Router } = require('express');
+const swaggerUi = require('swagger-ui-express');
 const DevController = require('./controllers/DevController');
 const SearchController = require('./controllers/SearchController');
-const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./utils/swagger/swaggerSpec');
 const swaggerOptions = require('./utils/swagger/swaggerOptions');
 

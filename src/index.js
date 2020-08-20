@@ -15,7 +15,7 @@ setupWebsocket(server);
 mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.MONGO_URL_CONNECTION, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 app.use(cors());
