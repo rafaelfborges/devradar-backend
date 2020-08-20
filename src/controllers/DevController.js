@@ -20,8 +20,8 @@ module.exports = {
       const apiResponse = await axios.get(
         `https://api.github.com/users/${githubUsername}`,
       );
-      // eslint-disable-next-line no-undef
-      const { name = login, avatarUrl, bio } = apiResponse.data;
+
+      const { login, avatarUrl, bio } = apiResponse.data;
       const techsArray = parseStringAsArray(techs);
 
       const location = {
@@ -31,7 +31,7 @@ module.exports = {
 
       dev = await Dev.create({
         githubUsername,
-        name,
+        login,
         avatarUrl,
         bio,
         techs: techsArray,
